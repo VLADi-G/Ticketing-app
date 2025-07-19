@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ticketing System – Public Transport (Unicard Task)
 
 This project is a lightweight backend system for managing ticketing in a public transport company. It supports vehicle registration, ticket issuing and validation, health checks, metrics, and log monitoring.
@@ -139,3 +140,7 @@ ticketing-system/
 ## License
 
 This project was developed for a technical assignment and is not intended for production use.
+=======
+# Ticketing-app
+Simple ticketing app
+>>>>>>> ddee5d559fe959ba971ae2db2551feeb27189fb3

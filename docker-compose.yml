@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: unicorn
+      POSTGRES_USER: unicorn_user
+      POSTGRES_PASSWORD: unicorn_pass
+    ports:
+      - "5432:5432"
+    networks:
+      - unicorn-net
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./create.sql:/docker-entrypoint-initdb.d/create.sql
+
+  app:
+    image: unicorn-ticketing:latest
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/unicorn
+      SPRING_DATASOURCE_USERNAME: unicorn_user
+      SPRING_DATASOURCE_PASSWORD: unicorn_pass
+    depends_on:
+      - postgres
+    networks:
+      - unicorn-net
+
+networks:
+  unicorn-net:

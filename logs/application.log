@@ -1,0 +1,72 @@
+2025-07-19 13:29:08.127  INFO 56464 --- [main] c.u.t.TicketingSystemApplication         : Starting TicketingSystemApplication using Java 21.0.2 on DESKTOP-GL4M0CU with PID 56464 (C:\Work\eclipse-update\workspace\ticketing-system\target\classes started by VLaDi-G in C:\Work\eclipse-update\workspace\ticketing-system)
+2025-07-19 13:29:08.133  INFO 56464 --- [main] c.u.t.TicketingSystemApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-19 13:29:09.299  INFO 56464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-19 13:29:09.391  INFO 56464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
+2025-07-19 13:29:10.320  INFO 56464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-19 13:29:10.336  INFO 56464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-19 13:29:10.337  INFO 56464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-19 13:29:10.489  INFO 56464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-19 13:29:10.490  INFO 56464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2284 ms
+2025-07-19 13:29:10.754  INFO 56464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-19 13:29:10.828  INFO 56464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-19 13:29:11.049  INFO 56464 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-19 13:29:11.255  INFO 56464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-19 13:29:11.503  INFO 56464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-19 13:29:11.530  INFO 56464 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-07-19 13:29:12.385  INFO 56464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-19 13:29:12.395  INFO 56464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-19 13:29:13.141  WARN 56464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-19 13:29:14.062  INFO 56464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-19 13:29:14.072  INFO 56464 --- [main] c.u.t.TicketingSystemApplication         : Started TicketingSystemApplication in 6.52 seconds (JVM running for 7.112)
+2025-07-19 13:29:22.244  INFO 56464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-19 13:29:22.244  INFO 56464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-19 13:29:22.246  INFO 56464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-19 13:29:23.517  INFO 56464 --- [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 348 ms
+2025-07-19 13:51:47.528  INFO 50144 --- [main] c.u.t.TicketingSystemApplication         : Starting TicketingSystemApplication using Java 21.0.2 on DESKTOP-GL4M0CU with PID 50144 (C:\Work\eclipse-update\workspace\ticketing-system\target\classes started by VLaDi-G in C:\Work\eclipse-update\workspace\ticketing-system)
+2025-07-19 13:51:47.533  INFO 50144 --- [main] c.u.t.TicketingSystemApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-19 13:51:48.586  INFO 50144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-19 13:51:48.654  INFO 50144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2025-07-19 13:51:49.373  INFO 50144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-19 13:51:49.381  INFO 50144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-19 13:51:49.381  INFO 50144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-19 13:51:49.533  INFO 50144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-19 13:51:49.534  INFO 50144 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1940 ms
+2025-07-19 13:51:49.747  INFO 50144 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-19 13:51:49.810  INFO 50144 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-19 13:51:50.005  INFO 50144 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-19 13:51:50.129  INFO 50144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-19 13:51:50.350  INFO 50144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-19 13:51:50.375  INFO 50144 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-07-19 13:51:51.251  INFO 50144 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-19 13:51:51.261  INFO 50144 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-19 13:51:51.877  WARN 50144 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-19 13:51:52.866  INFO 50144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-19 13:51:52.875  INFO 50144 --- [main] c.u.t.TicketingSystemApplication         : Started TicketingSystemApplication in 5.88 seconds (JVM running for 6.445)
+2025-07-19 13:51:58.790  INFO 50144 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-19 13:51:58.791  INFO 50144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-19 13:51:58.794  INFO 50144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-19 13:52:07.829  INFO 50144 --- [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 403 ms
+2025-07-19 17:24:59.205  INFO 33576 --- [main] c.u.t.TicketingSystemApplication         : Starting TicketingSystemApplication using Java 21.0.2 on DESKTOP-GL4M0CU with PID 33576 (C:\Work\eclipse-update\workspace\ticketing-system\target\classes started by VLaDi-G in C:\Work\eclipse-update\workspace\ticketing-system)
+2025-07-19 17:24:59.211  INFO 33576 --- [main] c.u.t.TicketingSystemApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-19 17:25:00.872  INFO 33576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-19 17:25:01.011  INFO 33576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
+2025-07-19 17:25:02.452  INFO 33576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-19 17:25:02.482  INFO 33576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-19 17:25:02.482  INFO 33576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-07-19 17:25:02.677  INFO 33576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-19 17:25:02.678  INFO 33576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3366 ms
+2025-07-19 17:25:03.126  INFO 33576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-19 17:25:03.251  INFO 33576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-07-19 17:25:03.502  INFO 33576 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-19 17:25:03.759  INFO 33576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-19 17:25:04.099  INFO 33576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-19 17:25:04.140  INFO 33576 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-07-19 17:25:05.321  INFO 33576 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-19 17:25:05.337  INFO 33576 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-19 17:25:06.481  WARN 33576 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-19 17:25:07.816  INFO 33576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-19 17:25:07.834  INFO 33576 --- [main] c.u.t.TicketingSystemApplication         : Started TicketingSystemApplication in 9.408 seconds (JVM running for 10.0)
+2025-07-19 17:25:12.561  INFO 33576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-19 17:25:12.561  INFO 33576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-19 17:25:12.563  INFO 33576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-19 17:25:13.699  INFO 33576 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 414 ms

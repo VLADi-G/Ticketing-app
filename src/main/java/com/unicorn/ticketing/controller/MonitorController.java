@@ -3,6 +3,7 @@ package com.unicorn.ticketing.controller;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -63,7 +64,7 @@ public class MonitorController {
 	@Operation(summary = "Fetch recent log lines with pagination")
 	public ResponseEntity<?> logs(@RequestParam(defaultValue = "0") int page,
 			@RequestParam(defaultValue = "100") int size) {
-		Path logFile = Path.of("logs/application.log");
+		Path logFile = Paths.get("logs/application.log");
 
 		if (!Files.exists(logFile)) {
 			return ResponseEntity.status(404).body("Log file not found.");

@@ -1,15 +1,15 @@
-# Ticketing System – Public Transport (Unicard Task)
+# Ticketing System – Backend for Public Transport
 
-This project is a lightweight backend system for managing ticketing in a public transport company. It supports vehicle registration, ticket issuing and validation, health checks, metrics, and log monitoring.
+This project is a lightweight backend system for managing ticketing in a public transport company. It was developed as part of a technical assessment for Unicard and supports vehicle registration, ticket issuing and validation, system health checks, runtime metrics, and log monitoring.
 
 ---
 
 ## Technologies Used
 
-- Java 8
+- Java 8 (OpenJDK 1.8.0_212)
 - Spring Boot
 - Spring Data JPA
-- H2 or PostgreSQL
+- PostgreSQL (or H2 for development)
 - Maven
 - Docker and Docker Compose
 - OpenAPI (via Springdoc)
@@ -21,22 +21,25 @@ This project is a lightweight backend system for managing ticketing in a public 
 
 ### Domain Functionality
 
-- Register vehicles with type, registration number, and passenger capacity
-- Issue tickets with unique codes, passenger name, and timestamp
-- Validate tickets only once, with a validation timestamp
+- Register vehicles with type, unique registration number, and capacity
+- Issue tickets:
+  - Each ticket has a unique code
+  - Includes passenger name and timestamp
+  - Associated with a specific vehicle
+- Validate tickets:
+  - Only once
+  - Stores the validation timestamp
 - List tickets by vehicle
 
 ### Monitoring and Observability
 
 - Health check endpoint: `/monitor/health`
 - Metrics endpoint: `/monitor/metrics`
-- Log listing with pagination: `/monitor/logs?page=0&size=100`
-
-### Logging
-
-- Logs are saved to `logs/application.log`
-- Configured in `application.properties`
-- Default level: INFO
+  - Total number of tickets
+  - Number of validated tickets
+  - Number of registered vehicles
+- Log monitoring: `/monitor/logs?page=0&size=100`
+  - Returns paginated application log entries from `logs/application.log`
 
 ---
 
@@ -47,65 +50,96 @@ This project is a lightweight backend system for managing ticketing in a public 
 
 ---
 
-## How to Run
+## How to Run the Project
 
-### 1. Clone the repository
+### 1. Clone the Repository
+
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/YOUR_USERNAME/ticketing-system.git
 cd ticketing-system
 ```
 
-### 2. Run with Docker Compose
+### 2. Build the Application
+
 ```bash
+./mvnw clean package
+```
+
+### 3. Run with Docker Compose (Recommended)
+
+```bash
+docker-compose down -v --remove-orphans
 docker-compose up --build
 ```
 
-### 3. Or run manually with Maven and H2
+This command builds and starts both the backend application and the PostgreSQL database.
+
+### 4. Or Run with H2 In-Memory Database (Development Mode)
+
 ```bash
-mvn clean install
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
+
+No additional setup is required.
 
 ---
 
 ## API Endpoints Overview
 
-Method: POST  
-Endpoint: /vehicles  
-Description: Register a new vehicle  
+### Vehicle Endpoints
 
-Method: GET  
-Endpoint: /vehicles/{id}/tickets  
-Description: List tickets for a vehicle  
+**Register a vehicle**  
+`POST /vehicles`  
+Request body:
+```json
+{
+  "type": "BUS",
+  "registrationNumber": "CA1234TX",
+  "capacity": 50
+}
+```
 
-Method: POST  
-Endpoint: /tickets  
-Description: Issue a new ticket  
+**List tickets for a vehicle**  
+`GET /vehicles/{vehicleId}/tickets`
 
-Method: POST  
-Endpoint: /tickets/{id}/validate  
-Description: Validate a ticket  
+---
 
-Method: GET  
-Endpoint: /monitor/health  
-Description: System health check  
+### Ticket Endpoints
 
-Method: GET  
-Endpoint: /monitor/metrics  
-Description: View ticket and vehicle statistics  
+**Issue a ticket**  
+`POST /tickets`  
+Request body:
+```json
+{
+  "passengerName": "Alice",
+  "vehicleId": 1
+}
+```
 
-Method: GET  
-Endpoint: /monitor/logs?page=0&size=100  
-Description: View paginated application logs  
+**Validate a ticket**  
+`POST /tickets/{ticketId}/validate`
+
+---
+
+### Monitoring Endpoints
+
+**Health check**  
+`GET /monitor/health`
+
+**Metrics**  
+`GET /monitor/metrics`
+
+**Log output (paginated)**  
+`GET /monitor/logs?page=0&size=100`
 
 ---
 
 ## Configuration
 
-The application configuration is in `src/main/resources/application.properties`:
-- Database configuration
-- Logging output path and level
-- OpenAPI and Swagger settings
+Main configuration is in `src/main/resources/application.properties`, including:
+- Database settings
+- Logging configuration
+- OpenAPI settings
 
 ---
 
@@ -114,10 +148,10 @@ The application configuration is in `src/main/resources/application.properties`:
 ```
 ticketing-system/
 ├── src/
-│   ├── main/
-│   │   └── java/...
-│   └── resources/
-│       └── application.properties
+│   └── main/
+│       └── java/... (controllers, services, entities)
+│       └── resources/
+│           └── application.properties
 ├── create.sql
 ├── Dockerfile
 ├── docker-compose.yml
@@ -128,17 +162,6 @@ ticketing-system/
 
 ---
 
-## Notes
+## About This Project
 
-- This project is compatible with Wildfly 18 standards.
-- Container-managed transactions are handled via Spring's `@Transactional`.
-- Logs are stored on the file system but can be extended to external systems or monitoring tools.
-
----
-
-## License
-
-This project was developed for a technical assignment and is not intended for production use.
-=======
-# Ticketing-app
-Simple ticketing app
+This project was developed as part of a backend developer technical assessment for Unicard.

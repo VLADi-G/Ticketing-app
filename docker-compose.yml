@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   postgres:
@@ -16,6 +15,7 @@ services:
       - ./create.sql:/docker-entrypoint-initdb.d/create.sql
 
   app:
+    build: .
     image: unicorn-ticketing:latest
     ports:
       - "8080:8080"
@@ -30,3 +30,6 @@ services:
 
 networks:
   unicorn-net:
+
+volumes:
+  pgdata:
